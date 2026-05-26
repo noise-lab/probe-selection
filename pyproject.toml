@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "probe-selection"
+version = "0.1.0"
+description = "Optimizing probe selection using shared latency anomalies"
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb>=1.0",
+    "pandas>=2.0",
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "tqdm>=4.0",
+    "ruptures>=1.1",
+    "detecta>=0.0.5",
+    "matplotlib>=3.7",
+    "seaborn>=0.13",
+    "pyarrow>=24.0.0",
+]
+
+[project.scripts]
+detect-jumps = "src.scripts.detect_jumps:main"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
