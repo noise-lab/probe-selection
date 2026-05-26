@@ -1,5 +1,7 @@
 # Optimizing Probe Selection Using Shared Latency Anomalies
 
+This is the code for the paper **[Less is More: Optimizing Probe Selection Using Shared Latency Anomalies](https://arxiv.org/abs/2602.03965)** (ACM CoNEXT 2026).
+
 Given RTT time series from a fleet of network measurement probes (Netrics/FLOTO), this project detects latency inflation events per probe, identifies which events are shared across probes, and selects the smallest subset of probes that collectively captures a target fraction of total anomaly impact.
 
 ```mermaid
@@ -120,3 +122,23 @@ results = analyzer.analyze(rtts_df, mins_df, mdev_df)
 - `jd` (default) — jitter dispersion: classifies a segment as congestion when RTT variance increases
 - `ks` — Kolmogorov–Smirnov test comparing segment RTT distributions
 - `lj_only` — latency jump amplitude only; skips jitter analysis
+
+## Citation
+
+If you use this code in your research, please cite:
+
+```bibtex
+@misc{sharma2026optimizing,
+      title={Less is More: Optimizing Probe Selection Using Shared Latency Anomalies}, 
+      author={Taveesh Sharma and Andrew Chu and Paul Schmitt and Francesco Bronzino and Nick Feamster and Nicole Marwell},
+      year={2026},
+      eprint={2602.03965},
+      archivePrefix={arXiv},
+      primaryClass={cs.NI},
+      url={https://arxiv.org/abs/2602.03965}, 
+}
+```
+
+## Contributing
+
+Issues and pull requests are welcome. Feel free to open an issue to report a bug, suggest a feature, or ask a question.
