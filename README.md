@@ -1,4 +1,4 @@
-# Optimizing Probe Selection Using Shared Latency Anomalies
+# PRISM: Optimizing Probe Selection Using Shared Latency Anomalies
 
 This is the code for the paper **[Less is More: Optimizing Probe Selection Using Shared Latency Anomalies](https://arxiv.org/abs/2602.03965)** (ACM CoNEXT 2026).
 
